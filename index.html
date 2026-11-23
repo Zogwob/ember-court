@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Ember Court — A duel of flame and cunning</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="stage">
+  <div id="table">
+    <div id="rival-row">
+      <div id="rival-portrait" class="portrait"></div>
+      <div id="rival-hand" class="hand"></div>
+      <div id="rival-pile" class="pile"><div class="pile-card"></div><div class="pile-label">Rival deck</div></div>
+    </div>
+    <div id="centre-row">
+      <div id="turn-banner" class="turn-banner yours">YOUR TURN</div>
+      <div id="round-label" class="round-label">Round 1</div>
+      <div id="centre-card"></div>
+      <div id="float-layer"></div>
+      <div id="log-panel">
+        <div class="log-title">The duel so far</div>
+        <ol id="log-list"></ol>
+      </div>
+    </div>
+    <div id="player-row">
+      <div id="player-portrait" class="portrait"></div>
+      <div id="player-hand" class="hand"></div>
+      <div id="player-side">
+        <div id="mana-gems" class="mana-gems"></div>
+        <div id="mana-text" class="mana-text">Mana 1/1</div>
+        <button id="end-turn-btn" type="button">End Turn</button>
+        <div class="keys-hint">1–7 play · Space ends turn</div>
+      </div>
+    </div>
+  </div>
+  <div id="thinking-banner" class="hidden">The Cinder Queen is thinking…</div>
+  <div id="title-screen" class="overlay">
+    <div class="title-panel">
+      <div class="title-kicker">A DUEL OF FLAME AND CUNNING</div>
+      <h1 class="title-big">EMBER COURT</h1>
+      <div id="title-card" class="title-card"></div>
+      <div class="howto">
+        <div>Reduce the Cinder Queen from 30 life to 0.</div>
+        <div>Play cards with clicks or keys 1–7. Mana refills each turn.</div>
+        <div>Shield blocks damage first. The Ember Court card ends duels.</div>
+      </div>
+      <div class="title-prompt">Click or press Enter to begin</div>
+    </div>
+  </div>
+  <div id="end-screen" class="overlay hidden">
+    <div class="end-panel">
+      <h1 id="end-title" class="end-title win">VICTORY</h1>
+      <div id="end-sub" class="end-sub">The Ember Court is yours</div>
+      <div id="end-totals" class="end-totals"></div>
+      <div class="end-prompt">Press Enter to play again</div>
+    </div>
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
